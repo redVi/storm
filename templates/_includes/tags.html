@@ -1,0 +1,6 @@
+<ul class="footer">
+  {% for tag, articles in tags|sort %}
+     <li class="footer"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}&nbsp;&bull;&nbsp;</a></li>
+  {% endfor %}
+</ul>
+<br/>

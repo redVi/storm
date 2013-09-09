@@ -1,0 +1,10 @@
+{% if LINKS %}
+<li>
+<h3>blogroll</h3>
+<ul>
+{% for name, link in LINKS %}
+  <li><a href="{{ link }}">{{ name }}</a></li>
+{% endfor %}
+</ul>
+</li>
+{% endif %}

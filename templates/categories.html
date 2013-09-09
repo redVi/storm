@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Categories - {{ SITENAME }}{% endblock %}
+{% block content %}
+                        {% if articles %}
+                        {% for article in articles %}
+                            {% if loop.index == 1 %}
+				<ul>
+                                {% for category, articles in categories %}
+                                    <li>{{ category }}</li>
+                                {% endfor %}
+                                </ul>
+		            {% endif %}
+                        {% endfor %}
+                        {% endif %}
+
+{% endblock %}

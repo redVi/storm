@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<title>{% block windowtitle %}Tags{% endblock %}</title>
+{% block content %}
+<ul>
+{% for tag, articles in tags|sort %}
+    <li>{{ tag }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
