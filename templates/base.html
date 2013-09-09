@@ -21,6 +21,6 @@
     {% endblock %}
 {% include '_includes/footer.html' %}
 </div>
-{% include 'analytics.html' %}
+{% if GOOGLE_ANALYTICS %}{% include 'analytics.html' %}{% endif %}
 </body>
 </html>

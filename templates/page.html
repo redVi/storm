@@ -2,10 +2,10 @@
 {% block windowtitle %}{{ page.title }}{% endblock %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
-    <h2><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h3>
+    <h3><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h3>
     {{ page.content }}
 
-    {% if PDF_PROCESSOR %}<h3 class="blogMeta"><a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get
-    the pdf</a></h3>{% endif %}
+    {% if PDF_PROCESSOR %}<h5><a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get
+    the pdf</a></h5>{% endif %}
 
 {% endblock %}
