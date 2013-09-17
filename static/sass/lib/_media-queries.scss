@@ -10,15 +10,13 @@
     pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
     thead { display: table-header-group; }
     tr, img { page-break-inside: avoid; }
-    @page { margin: 0.5cm; }
     p, h2, h3 { orphans: 3; widows: 3; }
     h2, h3{ page-break-after: avoid; }
-    pre, code {word-wrap: break-word;}
 }
-@media screen and (max-device-width: 800px) {
-    body {margin: 0;}
-    .nav, .footer
-    {margin:0;width:100%;}
+@media screen and (max-width: 768px) {
+    .nav, .footer, #footer-wrapper {margin:0;width:100%;}
+    .nav ul {font-size: 100%}
     #main {width:90%;}
+    #outer-wrapper {font-size: 16px; line-height: 130%}
     pre, code {word-wrap: break-word;}
 }

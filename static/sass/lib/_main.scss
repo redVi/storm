@@ -9,13 +9,8 @@
     margin: 1em 0;
     line-height: 140%;
   }
-  h1 {
-    font-size: 2.000rem;
-    background: $img-border bottom left repeat-x;
-  }
+  h1, h2 {background: $img-border bottom left repeat-x;}
   h2 {
-    font-size: 1.750rem;
-    background: $img-border bottom left repeat-x;
     a {
       display: inline-block;
       text-decoration: none;
@@ -26,34 +21,14 @@
       margin: 1em 0;
     }
   }
-  h3 {
-    font-size: 1.188rem;
-  }
-  h4 {
-    font-size: 1.063rem;
-  }
-
   p {
     margin-bottom: 1em;
   }
-  ul, ol {
-    list-style-position: outside;
-    margin-left: 2em;
-    margin-bottom: 1em;
-    line-height: 2;
-    ul, ol {
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
-    }
-  }
-  ul.posts {
-    margin-left: 0;
-    list-style-type: none;
-  }
+
   img {
     display: block;
     margin: 1em auto;
-    padding: .3rem;
+    padding: .3em;
     border: 1px solid $border00;
     max-width: 100%;
     @extend .border-radius;
@@ -63,6 +38,9 @@
     cursor: zoom-in;
     cursor: -moz-zoom-in;
     cursor: -webkit-zoom-in;
+  }
+  ul, ol, li {
+  margin-left: 1em;
   }
   .many {
     display: inline;
@@ -106,6 +84,7 @@
   }
 table {
   width:100%;
+  max-width: 100%;
   border-collapse:collapse;
   margin: 2% 0;
 }
@@ -145,17 +124,16 @@ th {
     border-bottom: 1px solid $base1_sol;
     border-top: 1px solid $base1_sol;
     @extend .border-radius;
+    font-size: 90%;
   }
   code {
     display: inline-block;
-    border: 1px 0px solid rgba(0, 0, 0, 0.15);
+    border: 1px 0 solid rgba(0, 0, 0, 0.15);
     background-color: transparent;
     color: $base0_sol;
-    font-size: 1.000rem;
   }
   pre {
     line-height: 1em;
-    font-size:0.938rem;
     margin-bottom: 1em;
     padding: 0.313em;
     overflow: auto;
