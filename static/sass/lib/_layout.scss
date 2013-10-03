@@ -1,6 +1,15 @@
 $img-border: url('../img/dotted-border.png');
 $header-bg: url("../img/header-bg.jpg");
 $noise-img: url("../img/noise.jpg");
+$logo: url("../img/logo.png");
+/*
+for use logo.png:
+replace line
+<div class="logo"><a href="{{ SITEURL }}">{{ SITENAME }}</a></div>
+on
+<a href="{{ SITEURL }}"><div class="logo"></div></a>
+in templates/_include/header.html
+*/
 
 * {
  margin: 0;
@@ -39,6 +48,13 @@ html, body {height: 100%; color: $text-color; background-color: $light-gray;}
     padding-top: 3%;
       }
   }
+  // .logo {
+  //   background: $logo no-repeat;
+  //   margin: 0 auto;
+  //   width: 305px;
+  //   max-width: 100%;
+  //   height: 52px;
+  // }
   .small {
     font-size: 80%;
   }
