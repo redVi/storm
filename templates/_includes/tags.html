@@ -1,5 +1,9 @@
 <ul class="footer">
   {% for tag, articles in tags|sort %}
+     {% if loop.last %}
+     <li class="footer"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+	 {% else %}
      <li class="footer"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}&nbsp;&bull;&nbsp;</a></li>
+	 {% endif %}
   {% endfor %}
 </ul>
