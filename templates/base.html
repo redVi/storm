@@ -17,8 +17,10 @@
 <body>
 <div id="outer-wrapper">
 {% include '_includes/header.html' %}
+    <div id="main">
     {% block content %}
     {% endblock %}
+    </div>
 </div>
 {% include '_includes/footer.html' %}
 {% if GOOGLE_ANALYTICS %}{% include 'analytics.html' %}{% endif %}

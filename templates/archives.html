@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Archive - {{ SITENAME }}{% endblock %}
 {% block content %}
-<div id="main">
 <h2>Archive</h2>
 {% for year, date_year in dates|groupby( 'date.year' )|reverse %}
 <h2>{{ year }}</h2>
@@ -12,5 +11,4 @@
 {% endfor %}
 {% endfor %}
 </dl>
-</div>
 {% endblock %}

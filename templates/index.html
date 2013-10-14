@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
 {% block content %}
-<div id="main">
 {% if articles %}
 {% for article in articles_page.object_list %}
 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
@@ -10,5 +9,4 @@
 {% endfor %}
 {% endif %}
 {% include "_includes/pagination.html" %}
-</div>
 {% endblock content %}
