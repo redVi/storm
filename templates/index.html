@@ -5,7 +5,7 @@
 {% for article in articles_page.object_list %}
 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
 <h5><i class="icon-feather"></i> {{ article.locale_date }} {% if article.update %} &nbsp; <i class="icon-spin4"></i> {{ article.update }} {% endif %}</h5>
-{{ article.content|truncate(620, killwords=False, end='...')|striptags }}
+{{ article.summary|striptags }}
 {% endfor %}
 {% endif %}
 {% include "_includes/pagination.html" %}
