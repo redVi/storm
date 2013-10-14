@@ -1,2 +1,10 @@
 {% extends "index.html" %}
 {% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+{% block content %}
+<h2>{{ tag }}</h2>
+<dl>
+{% for article in articles|reverse %}
+<dd><a href="{{ siteurl }}/{{ article.url }}">{{ article.title }}</a></dd>
+{% endfor %}
+</dl>
+{% endblock %}
