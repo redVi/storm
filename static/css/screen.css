@@ -72,6 +72,10 @@ html,body
 {
 	text-decoration: line-through;
 }
+#header-wrapper .social{
+	font-size: 60%;
+	padding: 1em 0 0 0;
+}
 #main
 {
 	margin: 0 auto;
