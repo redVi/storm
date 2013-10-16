@@ -1,8 +1,7 @@
 {% if SOCIAL %}
-  <h3>social</h3>
   <ul>
   {% for name, link in SOCIAL %}
-    <!--noindex--><li><a href="{{ link }}">{{ name }}</a></li><!--/noindex-->
+    <li><a href="{{ link }}">{{ name }}</a></li>
   {% endfor %}
   </ul>
 {% endif %}
