@@ -40,7 +40,7 @@ html, body {height: 100%; color: $text-color; background-color: $light-gray;}
 
 #header-wrapper {
   color: $white;
-  height: 9.375em;
+  min-height: 9.375em;
   vertical-align: middle;
   text-align: center;
   border-bottom: 1px solid $border;
@@ -65,26 +65,30 @@ html, body {height: 100%; color: $text-color; background-color: $light-gray;}
   .small {
     font-size: 80%;
   }
-.nav {
-  margin: 0 auto;
-  max-width: 100%;
-  font-family: $heading-font-family;
-  ul {
-    font-size: 120%;
-    text-align: center;
-    list-style-type: none;
+  .nav {
+    margin: 0 auto;
+    max-width: 100%;
+    font-family: $heading-font-family;
+    ul {
+      font-size: 120%;
+      text-align: center;
+      list-style-type: none;
+    }
+    li {
+      padding: 1em 1em 0 0;
+      display: inline-block;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {text-decoration: line-through;}
+    }
   }
-  li {
-    padding: 1em 1em 1em 0;
-    display: inline-block;
+  .social {
+    font-size:60%;
+    padding:1em 0 0;
   }
-  a {
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:hover {text-decoration: line-through;}
-  }
-}
 }
 
 #main {
