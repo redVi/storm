@@ -2,6 +2,11 @@
 {% block title %}Archive - {{ SITENAME }}{% endblock %}
 {% block content %}
 <h2>Archive</h2>
+
+{% if GOOGLE_PARTNER_PUB %}
+    {% include '_includes/search.html' %}
+{% endif %}
+
 {% for year, date_year in dates|groupby( 'date.year' )|reverse %}
 <h2>{{ year }}</h2>
 {% for month, articles in date_year|groupby( 'date.month' )|reverse %}
