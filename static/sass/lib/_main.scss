@@ -42,18 +42,18 @@
   ul, ol, li {
   margin-left: 1em;
   }
-  .many {
+  img[alt="many"] {
     display: inline;
     margin: 1em 0;
   }
-  .none {
+  img[alt="none"] {
       border: none;
     }
-  .left {
+  img[alt="left"] {
     float: left;
     margin: .5em 1em .25em 0;
   }
-  .right {
+  img[alt="right"] {
     float: right;
     margin: .5em 1em .25em 0;
   }
@@ -174,13 +174,15 @@ input[type="submit"] {
   cursor: pointer;
   border: 1px solid $gray;
   border-radius: 4px;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(201, 201, 201));
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
-  &:focus {
+  &:hover {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
+    background-image: none;
   }
 }
