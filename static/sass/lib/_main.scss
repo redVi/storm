@@ -39,7 +39,8 @@
     cursor: -moz-zoom-in;
     cursor: -webkit-zoom-in;
   }
-  ul, ol, li {
+  ul {margin: 1em 0px;}
+  ol, li {
   margin-left: 1em;
   }
   img[alt="many"] {
