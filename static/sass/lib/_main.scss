@@ -121,24 +121,24 @@ th {
     height: 100%;
 }
 
-  code {
+   code {
+    font-size: 0.98rem;
     display: inline-block;
-    font-size: 100%;
     background-color: transparent;
     color: $base0_sol;
   }
   pre {
-    line-height: 1em;
+    line-height: 1.5;
     margin-bottom: 1em;
     padding: 0.313em;
     overflow: auto;
     background-color: #fdf6e3;
     border: 1px solid rgba(0, 0, 0, 0.15);
     @extend .border-radius;
-    font-size: 90%;
     code {
       padding: 0;
       border: none;
+      font-size: 0.85rem;
     }
   }
 }
@@ -176,11 +176,11 @@ input[type="submit"] {
   border: 1px solid $gray;
   border-radius: 4px;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(201, 201, 201));
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-       -o-user-select: none;
-          user-select: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+       -o-user-select: text;
+          user-select: text;
   &:hover {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
