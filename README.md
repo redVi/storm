@@ -12,6 +12,10 @@ Options:
     CSS_FILE = 'screen.css'
     METADATA = 'Meta description is the home page'
 
+If you want use google search for your site, you may set variable:
+
+    GOOGLE_PARTNER_PUB = 'partner-pub-xxx'
+
 Pages settings:
 
     #Pages
