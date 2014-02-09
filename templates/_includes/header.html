@@ -4,4 +4,9 @@
     <div class="nav">
       {% include '_includes/pages.html' %}
     </div>
+    {% if SOCIAL %}
+    <div class="nav social">
+      {% include '_includes/social.html' %}
+    </div>
+    {% endif %}
 </div>
