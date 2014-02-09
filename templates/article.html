@@ -1,15 +1,21 @@
 {% extends "base.html" %}
-{% block title %}{{ article.title }}{% endblock %}
-{% block metadesk %}<meta name="description" content="{{ article.summary|striptags }}">{% endblock %}
-{% block author %}<meta name="author" content="{{ article.author }}">{%endblock%}
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+{% block metadesk %}<meta name="description" content="{{
+                                                      article.summary|striptags
+                                                      }}">{% endblock %}
+{% block author %}<meta name="author" content="{{ article.author  }}">{%endblock%}
 {% block content %}
 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-<h5><i class="icon-feather"></i> {{ article.locale_date }} {% if article.update %} &nbsp; <i class="icon-spin4"></i> {{ article.update }} {% endif %}</h5>
-{{ article.content }}
-<h5><i class="icon-user"></i> <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>,
-<i class="icon-bookmarks"></i> {% for tag in article.tags %}
+<h5><i class="icon-feather"></i> {{ article.locale_date }}
+  {% if article.update %} &nbsp; <i class="icon-spin4"></i> {{ article.update }} {% endif %}
+<i class="icon-bookmarks"></i>
+{% for tag in article.tags %}
 <span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> / </span>
-{% endfor %}</h5>
+{% endfor %}
+</h5>
+
+{{ article.content }}
+
 <p align="center"><a href="#">on the top</a></p>
 {% if DISQUS_SITENAME %}{% include '_includes/disqus.html' %}{% endif %}
 {% endblock %}

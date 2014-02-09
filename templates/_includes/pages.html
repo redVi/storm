@@ -1,12 +1,5 @@
 {% if DISPLAY_PAGES_ON_MENU %}
-<ul>
-  {% for page in PAGES %}
-    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-    <ul>
-      <li><a href="{{ SITEURL }}/archives.html">Archive</a></li>
-      <li><a href="{{ SITEURL }}/about.html">About</a></li>
-    </ul>
+{% for title, link in MENUITEMS %}
+  <li><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+{% endfor %}
 {% endif %}

@@ -5,15 +5,26 @@ Storm &mdash; responsive theme for pelican.
 
 ##Configuration Options
 
-    SITESUBTITLE = u'Description of the site'
+Options:
+
+    SITESUBTITLE = 'Description of the site'
     THEME = 'storm'
     CSS_FILE = 'screen.css'
-    METADATA = u'Meta description is the home page'
+    METADATA = 'Meta description is the home page'
 
-You can use pages or direct templates:
+Pages settings:
 
-    DISPLAY_PAGES_ON_MENU  = False
+    #Pages
     DIRECT_TEMPLATES = ('about', 'archives', '404', 'index')
+    DISPLAY_PAGES_ON_MENU  = True
+    ARCHIVES_URL = 'archives/'
+    ARCHIVES_SAVE_AS = 'archives/index.html'
+    ABOUT_URL = 'about/'
+    ABOUT_SAVE_AS = 'about/index.html'
+
+    MENUITEMS = (('Archive', 'archives/'),
+                ('About', 'about/'),)
+
 
 ##Preview
 

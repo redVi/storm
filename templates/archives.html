@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Archive - {{ SITENAME }}{% endblock %}
+{% block title %}Archive | {{ SITENAME }}{% endblock %}
 {% block content %}
 <h2>Archive</h2>
 
@@ -11,7 +11,9 @@
 <h2>{{ year }}</h2>
 {% for month, articles in date_year|groupby( 'date.month' )|reverse %}
 <dl>{% for article in articles|reverse %}
-    <dd><a href="{{ article.url }}">{{ article.title }}</a> <span class="archive-date">{{ article.date.strftime('%d') }} {{ article.date.strftime('%B')[:3] }}</span></dd>
+    <dd><a href="{{ SITE_URL }}/{{ article.url }}">{{ article.title }}</a>
+      <span class="archive-date">{{ article.date.strftime('%d') }} {{ article.date.strftime('%B')[:3] }}</span>
+    </dd>
 {% endfor %}
 {% endfor %}
 {% endfor %}

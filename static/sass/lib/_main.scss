@@ -110,6 +110,7 @@ th {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
+    @extend .border-radius;
 }
 .video iframe,
 .video object,
@@ -120,15 +121,15 @@ th {
     width: 100%;
     height: 100%;
 }
-
-   code {
-    font-size: 0.98rem;
+  code {
+    font: normal 0.98rem $mono;
     display: inline-block;
     background-color: transparent;
     color: $base0_sol;
   }
   pre {
     line-height: 1.5;
+    font: normal 0.85rem $mono;
     margin-bottom: 1em;
     padding: 0.313em;
     overflow: auto;
@@ -138,7 +139,6 @@ th {
     code {
       padding: 0;
       border: none;
-      font-size: 0.85rem;
     }
   }
 }
@@ -154,12 +154,6 @@ input[type="text"], textarea {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
-  &:focus {
-    border-color: #66afe9;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  }
 }
 
 input[type="submit"] {
