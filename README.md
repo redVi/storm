@@ -29,6 +29,16 @@ Pages settings:
     MENUITEMS = (('Archive', 'archives/'),
                 ('About', 'about/'),)
 
+##Modification
+
+Css-style was written with the help of sass. It means you need install ruby and
+sass:
+
+    $ emerge -av ruby
+    $ gem install sass compass
+    $ cd static
+    $ compass compile && rm -rf .sass-cache
+
 
 ##Preview
 
