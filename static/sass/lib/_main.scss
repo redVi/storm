@@ -122,23 +122,24 @@ th {
     height: 100%;
 }
   code {
-    font: normal 0.98rem $mono;
+    font-size: 1.0rem;
     display: inline-block;
     background-color: transparent;
     color: $base0_sol;
   }
   pre {
     line-height: 1.5;
-    font: normal 0.85rem $mono;
     margin-bottom: 1em;
     padding: 0.313em;
     overflow: auto;
-    background-color: #fdf6e3;
+    background-color: #fbfbfb;
     border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
     @extend .border-radius;
     code {
       padding: 0;
       border: none;
+      font-size: 0.85rem;
     }
   }
 }
