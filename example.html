@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Example Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link href="./static/css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="outer-wrapper">
+<div id="header-wrapper">
+    <div class="logo"><a href="#">Storm</a></div>
+    <div class="small">My simple blog about something</div>
+<div class="nav">
+  <ul>
+    <li><a href="#">Archive</a></li>
+    <li><a href="#">About me</a></li>
+  </ul>
+</div>
+</div>
+
+<div id="main">
+<h2>Title</h2>
+<h5><i class="icon-feather"></i> 22 november 2013
+
+ <i class="icon-bookmarks"></i>
+
+<a href="#">Git /</a></h5>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting
+  industry. Lorem Ipsum has been the industry's standard dummy text ever since
+  the 1500s, when an unknown printer took a galley of type and scrambled it to
+  make a type specimen book. It has survived not only five centuries, but also
+  the leap into electronic typesetting, remaining essentially unchanged. It was
+  popularised in the 1960s with the release of Letraset sheets containing Lorem
+  Ipsum passages, and more recently with desktop publishing software like Aldus
+  PageMaker including versions of Lorem Ipsum.</p>
+
+<h2 id="toc_0">Subtitle</h2>
+
+<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+  roots in a piece of classical Latin literature from 45 BC, making it over 2000
+  years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+  Virginia, looked up one of the more obscure Latin words, consectetur, from a
+  Lorem Ipsum passage, and going through the cites of the word in classical
+  literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+  1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
+  and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+  of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+  "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+<p><img src="http://www.unix-lab.org/source/fork.jpg" alt="fork" title="fork on github"></p>
+
+<p>Code block:</p>
+
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># post.rb</span>
+
+<span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">before_save</span> <span class="ss">:render_content</span>
+
+  <span class="k">def</span> <span class="nf">render_content</span>
+    <span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
+    <span class="n">renderer</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">::</span><span class="no">Render</span><span class="o">::</span><span class="no">HTML</span><span class="o">.</span><span class="n">new</span>
+    <span class="n">extensions</span> <span class="o">=</span> <span class="p">{</span><span class="n">fenced_code_blocks</span><span class="p">:</span> <span class="kp">true</span><span class="p">}</span>
+    <span class="n">redcarpet</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">::</span><span class="no">Markdown</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">extensions</span><span class="p">)</span>
+    <span class="nb">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">redcarpet</span><span class="o">.</span><span class="n">render</span> <span class="nb">self</span><span class="o">.</span><span class="n">content</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<h2 id="toc_1">Subtitle</h2>
+
+<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+
+<a href="#"><img src="http://www.unix-lab.org/source/top.png" alt="none" /></a>
+
+</div>
+</div>
+<div id="footer-wrapper">
+<ul class="footer">
+   <li><a href="/tags/android.html" class="set-1">android</a> <a href="/tags/arch.html" class="set-3">arch</a> <a href="/tags/blog.html" class="set-1">blog</a> <a href="/tags/debian.html" class="set-1">debian</a> <a href="/tags/decorations.html" class="set-1">decorations</a> <a href="/tags/editors.html" class="set-1">editors</a> <a href="/tags/gentoo.html" class="set-1">gentoo</a> <a href="/tags/git.html" class="set-1">git</a> <a href="/tags/kernel.html" class="set-1">kernel</a> <a href="/tags/latex.html" class="set-1">latex</a> <a href="/tags/linux.html" class="set-5">linux</a> <a href="/tags/python.html" class="set-1">python</a> <a href="/tags/ruby.html" class="set-1">ruby</a> <a href="/tags/server.html" class="set-2">server</a> <a href="/tags/web.html" class="set-1">web</a> <a href="/tags/windows.html" class="set-1">windows</a></li>
+</ul>
+<ul class="footer">
+    <li class="footer">&copy; 2014 ::</li>
+    <li class="footer"><a href="#">storm</a></li>
+</ul>
+</div>
+
+</body>
+</html>
