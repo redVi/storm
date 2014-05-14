@@ -129,19 +129,16 @@ dd {margin-left: 1em;}
   }
   pre {
     line-height: 1.5;
+    font-size: 0.95rem;
     margin-bottom: 1em;
     padding: 0.313em;
     overflow: auto;
     background-color: $white-mono;
     border: 1px solid $gray;
     @extend .border-radius;
-    code {
-      padding: 0;
-      border: none;
-      font-size: 0.85rem;
-    }
   }
 }
+
 .pagination {
   text-align: center;
   margin: 1em 0;
